@@ -1,4 +1,4 @@
-# NotionAI Scheduler 🚀
+# NotionAI Scheduler 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/your-extension-id)](https://chrome.google.com/webstore/detail/your-extension-name/id)
