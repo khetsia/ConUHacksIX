@@ -4,6 +4,11 @@
 chrome.tabs.onUpdated.addListener((tabID,tab)=>{
     if(tab.url && tab.url.includes("calendar.google.com/calendar"))
     {
+        chrome.runtime.onMessage.addListener((message,user, userResponse)=>{
+            if(message.type=="CREATE_EVENT"){
+                //retreive API file here?
+            }
+        })
 
     }
-})
+});

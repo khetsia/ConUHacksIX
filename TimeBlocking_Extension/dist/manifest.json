@@ -5,12 +5,12 @@
   "host_permissions": ["calendar.google.com"],
   "description": "Base Level Extension",
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "src/background.js"
   },
   "content_scripts":
   {
     "matches": ["*://calendar.google.com/*"],
-    "js": ["contentScript.js"]
+    "js": ["src/contentScript.js"]
   },
   "action": {
     "default_popup": "hello.html",
