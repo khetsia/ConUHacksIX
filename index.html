@@ -4,7 +4,65 @@
 <head>
     <title>Google Calendar API Quickstart</title>
     <meta charset="utf-8" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0; /* Light gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #D0B8A8; /* Light brown background for the form */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            width: 400px; /* Adjust width as needed */
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center; /* Horizontally center the image */
+            margin-bottom: 20px;
+        }
+        .logo-container img {
+            max-width: 100%; /* Ensure image scales down if needed */
+            height: auto;
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .input-field {
+            margin-bottom: 15px;
+        }
+        .input-field label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        .input-field input, .input-field select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .submit-button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,28 +82,36 @@
 
     <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md" id="container_div">
         <h1 class="text-2xl font-bold mb-4">What event(s) would you like to add?</h1>
+        
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" width="100">  </div>
+        <h2 class="title">Please describe your task!</h2>
         <form id="eventForm">
-            <div class="mb-4">
-                <label class="block text-sm font-medium mb-2">Event Description</label>
-                <input type="text" id="eventTitle" class="w-full p-2 border rounded"
-                    placeholder="E.g., Meeting with John" required>
-                <label class="block text-sm font-medium mb-2">Event Date</label>
-                <input type="date" id="eventDate" class="w-full p-2 border rounded" placeholder="E.g., Tomorrow"
-                    required>
-                <label class="block text-sm font-medium mb-2">Start Time</label>
-                <input type="time" id="startTime" class="w-full p-2 border rounded" placeholder="E.g., 1 PM" required>
-                <label class="block text-sm font-medium mb-2">End Time</label>
-                <input type="time" id="endTime" class="w-full p-2 border rounded" placeholder="E.g., 3 PM" required>
+            <div class="input-field">
+                <label for="eventTitle">Event Description</label>
+                <input type="text" id="eventTitle" placeholder="E.g., Meeting with John" required>
             </div>
-            <div class="mb-4">
-                <label class="block text-sm font-medium mb-2">Priority</label>
-                <select id="priority" class="w-full p-2 border rounded">
+            <div class="input-field">
+                <label for="eventDate">Event Date</label>
+                <input type="date" id="eventDate" required>
+            </div>
+            <div class="input-field">
+                <label for="startTime">Start Time</label>
+                <input type="time" id="startTime" required>
+            </div>
+            <div class="input-field">
+                <label for="endTime">End Time</label>
+                <input type="time" id="endTime" required>
+            </div>
+            <div class="input-field">
+                <label for="priority">Priority</label>
+                <select id="priority">
                     <option value="high">High</option>
                     <option value="medium">Medium</option>
                     <option value="low">Low</option>
                 </select>
             </div>
-            <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Add Event</button>
+            <button type="submit" class="submit-button">Add Event</button>
         </form>
         <div id="eventList" class="mt-4">
             <!-- Events will be listed here -->
