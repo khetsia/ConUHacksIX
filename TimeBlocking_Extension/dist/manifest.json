@@ -1,0 +1,21 @@
+{
+  "name": "Buckin'",
+  "version": "1.0",
+  "permissions": ["tabs"],
+  "host_permissions": ["calendar.google.com"],
+  "description": "Base Level Extension",
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts":
+  {
+    "matches": ["*://calendar.google.com/*"],
+    "js": ["src/contentScript.js"]
+  },
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "hello_extensions.png",
+    "default_title": "Buckin'"
+  },
+  "manifest_version": 3
+}
