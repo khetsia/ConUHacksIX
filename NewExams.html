@@ -1,0 +1,68 @@
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    </head>
+<body>
+<form id="form">
+    <center> <h3> Add a new Exam/Quiz :</h3></center>
+    <input type="text" id="input" placeholder="Enter the name of the exam" required>
+    
+    <center><label class="_input-label" for="ExamDate">When is it?</label></center>
+    <input class="_input" type="date" id="ExamDate" name="ExamDate" required>
+
+    <center><label class="_input-label" for="ExamTime">What time is it?</label></center>
+    <input class="_input" type="time" id="ExamTime" name="ExamTime" required>
+
+    <center> <h3> How difficult :</h3></center>
+    <div class="rating">
+        <input type="radio" id="star-1" name="star-radio1" value="1" >
+        <label for="star-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+        </label>
+        <input type="radio" id="star-2" name="star-radio1" value="2">
+        <label for="star-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+        </label>
+        <input type="radio" id="star-3" name="star-radio1" value="3">
+        <label for="star-3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+        </label>
+        <input type="radio" id="star-4" name="star-radio1" value="4">
+        <label for="star-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+        </label>
+        <input type="radio" id="star-5" name="star-radio1" value="5"checked>
+        <label for="star-5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+        </label>
+      </div>
+
+    <button type="submit" id="submit">Add</button>
+</form>
+
+<div class="container" id="list"></div>
+
+<button class="animated-button" id = "hidden">
+    <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+      ></path>
+    </svg>
+    <span class="text">Modern Button</span>
+    <span class="circle"></span>
+    <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+      ></path>
+    </svg>
+  </button>
+  
+<footer><center><a href="https://calendar.google.com/calendar" target="_blank"> Open Google calendar <img src="Image/image.png" alt="Calendar Icon" style="width:16px;height:16px;"></a></center></footer>
+</footer>
+</body>
+
+<script src = "Scripts/NewExams.js"> 
+
+</script>
+</html>
