@@ -1,0 +1,126 @@
+
+button {
+    /* Variables */
+    --button_radius: 0.5em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+  }
+  
+  .button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.5em 1em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+  }
+  
+  button:hover .button_top {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+  }
+  
+  button:active .button_top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+  }
+
+  
+  a{
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  body {
+    font-family: sans-serif;
+    background-color: #D8D2CD; /* Light grayish-brown background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #E9E5E1; /* Off-white/light beige background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.input-field {
+    margin-bottom: 15px;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.input-field input,
+.input-field select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #F5F5F5; /* Very light gray for input fields */
+}
+
+.submit-button {
+    background-color: #A7795D; /* Brownish-orange button color */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #916448; /* Darker brown on hover */
+}
+        /* Styles for the "Buckin'" logo text */
+.logo-text {
+    font-family: 'Courier New', monospace; /* Or any font you prefer */
+    font-size: 2em; /* Adjust as needed */
+    font-weight: bold;
+    color: #7A573A; /* Dark brown color */
+    text-align: center;
+    margin-bottom: 10px; /* Space between text and image */
+}
+.boot-icon {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Prevents image from affecting text flow */
+    margin-bottom: 10px;
+}
